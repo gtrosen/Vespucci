@@ -12,15 +12,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = vespucci
 TEMPLATE = app
 
-win32: LIBS += -L$$PWD/../../../../../Libraries/OpenBLAS-v0.2.8-x86-Win/lib/ -llibopenblas
 
-INCLUDEPATH += $$PWD/../../../../../Libraries/OpenBLAS-v0.2.8-x86-Win/include/
-DEPENDPATH += $$PWD/../../../../../Libraries/OpenBLAS-v0.2.8-x86-Win/include/
-
-
-
-INCLUDEPATH += "C:/Libraries/armadillo-4.300.0/include"
-DEPENDPATH += "C:/Libraries/armadillo-4.300.0/include"
+INCLUDEPATH += "C:/Libraries/armadillo-4.300.5/include"
+DEPENDPATH += "C:/Libraries/armadillo-4.300.5/include"
 
 
 SOURCES += main.cpp\
@@ -38,8 +32,7 @@ SOURCES += main.cpp\
     bandratiodialog.cpp \
     mapviewer.cpp \
     principalcomponentsdata.cpp \
-    principalcomponentsdialog.cpp \
-    principalcomponentsworker.cpp
+    principalcomponentsdialog.cpp
 
 HEADERS  += mainwindow.h \
     qcustomplot.h \
@@ -55,8 +48,7 @@ HEADERS  += mainwindow.h \
     bandratiodialog.h \
     mapviewer.h \
     principalcomponentsdata.h \
-    principalcomponentsdialog.h \
-    principalcomponentsworker.h
+    principalcomponentsdialog.h
 
 FORMS    += mainwindow.ui \
     loaddataset.ui \
@@ -70,5 +62,3 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     resources.qrc
-
-
