@@ -1,0 +1,13 @@
+digraph "SpectrumViewer::SpectrumViewer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SpectrumViewer::Spectrum\lViewer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SpecMap::PointSpectrum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#a164c305f6cfa6af064958d7aedc1ef57",tooltip="SpecMap::PointSpectrum. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SpecMap::WavelengthRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#a4a65279e66ed83d183405b74bf06f6ed",tooltip="SpecMap::WavelengthRange. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SpecMap::PointSpectrumRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#a2118cc3ec4fc9af96979fdfb40f9311c",tooltip="SpecMap::PointSpectrumRange. "];
+}

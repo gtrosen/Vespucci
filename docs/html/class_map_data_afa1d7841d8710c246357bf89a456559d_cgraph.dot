@@ -1,0 +1,21 @@
+digraph "MapData::MapData"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MapData::MapData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SpecMap::name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#afcae254b1019a6c637ae9f278c635715",tooltip="SpecMap::name. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SpecMap::KeyRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#ac659ec52e026309d8d8643a13ef44cf6",tooltip="SpecMap::KeyRange Finds the minima and maxima of x variable to properly set axes of QCustomPlot objec..."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SpecMap::ValueRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#a219695c46a8a2217cdc094b90320ed90",tooltip="SpecMap::ValueRange Finds the minima and maxima of y variable to properly set axes of QCustomPlot obj..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SpecMap::KeySize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#a203c478f5d8e8b6ff1a3a3c31ad71d9c",tooltip="SpecMap::KeySize Finds the number of data points in x variable to properly set axes of QCustomPlot ob..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SpecMap::ValueSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#ae679389c6997a46d5e8c0947ece809b5",tooltip="SpecMap::ValueSize Finds number of unique y values for properly setting QCPAxis. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MapData::CreateImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_map_data.html#ad1fe1aaad46b33c4f6a2be1d7f889dee",tooltip="MapData::CreateImage. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="MapData::source_index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_map_data.html#a24c45edae66512b7a7b7d62be38b91f1",tooltip="MapData::source_index. "];
+}

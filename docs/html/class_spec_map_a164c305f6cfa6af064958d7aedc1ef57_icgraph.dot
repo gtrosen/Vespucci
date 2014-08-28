@@ -1,0 +1,9 @@
+digraph "SpecMap::PointSpectrum"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SpecMap::PointSpectrum",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SpectrumViewer::Spectrum\lViewer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spectrum_viewer.html#ace1267e65878be8b28c30892395e6c9e",tooltip="SpectrumViewer::SpectrumViewer The constructor for when a spectrum viewer is linked to a MapViewer..."];
+}

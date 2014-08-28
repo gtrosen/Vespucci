@@ -1,0 +1,15 @@
+digraph "SpectrumViewer::SpectrumViewer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SpectrumViewer::Spectrum\lViewer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SpecMap::x_axis_description",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#aa984c31443a0bd88b65d5f401e9e1673",tooltip="SpecMap::x_axis_description The x_axis_description is printed on the spectrum viewer. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SpecMap::y_axis_description",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#afa64ad149fb69b9e2c15fef3b881f4ae",tooltip="SpecMap::y_axis_description. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SpecMap::vertex_components_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spec_map.html#a352a5de7f0910b133f8dd4452a926a05",tooltip="SpecMap::vertex_components_data Accessor for vertex_components_data_. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VCAData::Endmember",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_c_a_data.html#ae59aa1da7eaca3dfe99bd42d3b5cc612",tooltip="VCAData::Endmember. "];
+}

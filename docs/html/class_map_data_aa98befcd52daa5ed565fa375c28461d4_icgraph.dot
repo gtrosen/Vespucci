@@ -1,0 +1,11 @@
+digraph "MapData::type"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MapData::type",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MapData::set_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_map_data.html#a5ff97fbb20dfca5642ce39e26dde38af",tooltip="MapData::set_type. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MapData::set_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_map_data.html#ab9eff280b000c33226850a6541c81f89",tooltip="MapData::set_name. "];
+}
