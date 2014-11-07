@@ -1,80 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vespucci by dpfoose</title>
+    <meta name="description" content="Vespucci : A cross-platform application for hyperspectral imaging, with a focus on Raman and IR spectromicroscopy.">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Vespucci</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Vespucci</h1>
-        <p>A cross-platform application for spectroscopic imaging, with a focus on Raman and IR microscopy.</p>
 
-        <p class="view"><a href="https://github.com/dpfoose/Vespucci">View the Project on GitHub <small>dpfoose/Vespucci</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dpfoose/Vespucci">View on GitHub</a>
 
-		<h3>Master Branch</h3>
-        <ul>
-          <li><a href="https://github.com/dpfoose/Vespucci/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/dpfoose/Vespucci/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/dpfoose/Vespucci">View On <strong>GitHub</strong></a></li>
-        </ul>
-		<h3>Development Branch</h3>
-		<ul>
-		  <li><a href="https://github.com/dpfoose/Vespucci/zipball/develop">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/dpfoose/Vespucci/tarball/develop">Download <strong>TAR Ball</strong></a></li>
-		  <li><a href="https://github.com/dpfoose/Vespucci/tree/develop">View On <strong>GitHub</strong></a></li>
-		</ul>
-      </header>
-      <section>
+          <h1 id="project_title">Vespucci</h1>
+          <h2 id="project_tagline">A cross-platform application for hyperspectral imaging, with a focus on Raman and IR spectromicroscopy.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dpfoose/Vespucci/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dpfoose/Vespucci/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
-<a name="vespucci" class="anchor" href="#vespucci"><span class="octicon octicon-link"></span></a>Vespucci</h1>
+<a id="vespucci" class="anchor" href="#vespucci" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vespucci</h1>
 
-<p>A chemical imaging application written in C++ using Qt and armadillo.  Vespucci creates false-color images from hyperspectral datasets using several univariate and multivarate methods.  
-Vespucci is designed primarily for Raman and IR spectromicroscopy, but can (in theory, eventually) process any dataset consisting of spatial and spectral information.  
-Vespucci is designed to be as easy to use as possible, with a lower memory footprint than packages written for systems like MATLAB or R.  
-This focus on ease of use somewhat reduces the program's functionality, as the user does not have access to anything "under the hood".</p>
+<p>Vespucci is a cross-platform software tool for spectroscopic imaging and analysis. Vespucci is free software distributed under the terms of the GNU General Public License. Vespucci is written in C++ using the Qt library for GUI widgets, the QCustomPlot library for image creation, the Armadillo library for matrix mathematics and the MLPACK library for machine learning. Vespucci is capable of several analysis methods, including univariate mapping (with intensities, bandwidths, peak area, and band ratio determination methods), principal components analysis, vertex components analysis with endmember extraction, partial-least-squares determinant analysis and k-means clustering. In addition to multivariate analysis and image creation, Vespucci can perform several data pre-processing operations, including filtering, de-noising, Savitzky-Golay smoothing, normalization, background subtraction, and baseline correction. </p>
 
-<p>Currently, the following techniques are supported (in the development branch)</p>
-<ul>
-	<li>Spectral pre-processing, including filtering (moving average, median, derivative filtering and SVD denoising) and normalization (Z-score, unit area and min/max)</li>
-	<li>Univariate mapping with peak area, peak intensity and peak width determination methods</li>
-	<li>Band ratio mapping with peak area and peak intensity determination methods.</li>
-	<li>Partial least squares mapping</li>
-	<li>Principal component analysis</li>
-	<li>Vertex component analysis, including endmember extraction</li>
-	<li>K-means clustering</li>
-	
-</ul>
+<p>Vespucci is designed with several main goals in mind: (1) Mathematical transparency: All operations are logged, allowing the user to remember which operations were performed. In comparison with well-established mathematical analysis programs such as MATLAB, which produce similar results, this fully-documented code is open-source (distributed under the GNU General Public License). (2) Ease-of-use: Users can perform all actions entirely through a simple GUI, without remembering function calls. No outside software package is required. Users of this software only have to be scientists, not computer programmers. It is hoped that this ease-of-use will allow for wider adoption of multivariate analysis techniques in spectroscopic imaging. (3) Extensibility: Users having only a beginner’s familiarity with C++ can write new methods and contribute to the project easily. This is achieved by the use of libraries that utilize syntax deliberately similar to the common scientific programming languages MATLAB and Octave. The project is compiled with commonly-available programming tools, and binaries of the relevant libraries are available for potential contributors. (4) Versatility: Vespucci can theoretically handle any dataset that consists of evenly-spaced spatial data with a corresponding digital signal, including molecular spectroscopic images, mass spectrometric images and X-ray diffraction data. </p>
 
-<p>Source code documentation (generated by Doxygen) can be found <a href="docs/html/index.html">here</a>
+<p>Currently, Vespucci can only handle ASCII files in either a "wide" format (where each line is a spectra) or "long" format, where each line is a point on the spectra. Vespucci can export images in JPEG, PNG and TIFF formats and data in CSV and tab-delimited ASCII formats.</p>
 
-<p>Currently, Vespucci can only handle ASCII files in a "wide" format (as the Raman spectrometer currently used by my group, manufactured by Horiba, outputs ASCII files in this format):
-<code>
-&#09;&#09;&#09;wavelength
-x&#09;y&#09;spectra 
-</code></p>
-
-<p>The ability to import other data formats will be implemented in the near future.</p>
-
-<p>Daniel P. Foose</p>
-<p>Department of Chemistry</p>
-<p>Wright State University</p>
-<p>Dayton, OH, United States of America</p>
+<p>Vespucci © 2014 Wright State University
+Daniel P. Foose - developer
+foose DOT 3 AT wright DOT edu</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/dpfoose">dpfoose</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Vespucci maintained by <a href="https://github.com/dpfoose">dpfoose</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -85,6 +64,7 @@ x&#09;y&#09;spectra
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
