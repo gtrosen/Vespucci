@@ -501,16 +501,18 @@ void VespucciDataset::UnitAreaNormalize()
 
 ///
 /// \brief VespucciDataset::PeakIntensityNormalize
-/// \param peak_position The wavelength value
+/// \param left_bound
+/// \param right_bound
 ///
-void VespucciDataset::PeakIntensityNormalize(double peak_position)
+void VespucciDataset::PeakIntensityNormalize(double left_bound, double right_bound)
 {
     spectra_old_ = spectra_;
-    uword index = FindIndex(peak_position);
+    vec positions;
+    vec peak_maxes = arma_ext::FindPeakMaxMat(trans(spectra_), trans(wavelength_), left_bound, right_bound, positions);
     for (uword i = 0; i < spectra_.n_rows; ++i){
-        spectra_.row(i) /= spectra_(i, index);
+        spectra_.row(i) /= peak_maxes(i);
     }
-    last_operation_ = "peak intensity normalize";
+    last_operation_ = "Peak intensity normalize";
 }
 
 ///

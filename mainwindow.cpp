@@ -35,6 +35,7 @@
 #include "datasetlistmodel.h"
 #include "analysisdialog.h"
 #include "metadatasetdialog.h"
+#include "rangedialog.h"
 
 ///
 /// \brief MainWindow::MainWindow
@@ -223,17 +224,17 @@ void MainWindow::on_actionNormalize_Standardize_triggered()
     QString item = QInputDialog::getItem(this,
                                          tr("Normalization/Standardization"),
                                          tr("Method:"), methods, 0, false, &ok);
-    double wavelength;
     double scaling_factor;
     try{
         if (ok && item == "Min/Max"){data->MinMaxNormalize();}
         else if (ok && item == "Unit Area"){data->UnitAreaNormalize();}
         else if (ok && item == "Z-score"){data->ZScoreNormalize();}
         else if (ok && item == "Peak Intensity"){
-            wavelength = QInputDialog::getDouble(this, tr("Enter Peak Position"),
-                                                 tr("Position"), 0, 0,
-                                                 data->wavelength().max(), 3, &ok);
-            data->PeakIntensityNormalize(wavelength);
+            double min = data->wavelength_ptr()->min();
+            double max = data->wavelength_ptr()->max();
+            RangeDialog *range_dialog = new RangeDialog(this, min, max);
+            QObject::connect(range_dialog, SIGNAL(DialogAccepted(double,double)), this, SLOT(RangeDialogAccepted(double,double)));
+            range_dialog->show();
         }
         else if (ok && item == "Scale Spectra"){
             scaling_factor = QInputDialog::getDouble(this, tr("Enter Scaling Factor"),
@@ -783,4 +784,17 @@ void MainWindow::on_actionReject_Clipped_Spectra_triggered()
     double threshold = QInputDialog::getDouble(this, "Reject Clipped Spectra", "Threshold", 64000.00);
     dataset->RemoveClippedSpectra(threshold);
     dataset.clear();
+}
+
+
+void MainWindow::RangeDialogAccepted(double min, double max)
+{
+    int row = dataset_list_view_->currentIndex().row();
+    QSharedPointer<VespucciDataset> data = workspace->DatasetAt(row);
+    try{
+        data->PeakIntensityNormalize(min, max);
+    }
+    catch(exception e){
+        DisplayExceptionWarning(e);
+    }
 }
